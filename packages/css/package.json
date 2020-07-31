@@ -1,5 +1,5 @@
 {
-    "name": "@juliankoehn/ruis",
+    "name": "@ruids/css",
     "description": "Ruis CSS",
     "version": "0.0.0-dev",
     "main": "dist/styles.css",

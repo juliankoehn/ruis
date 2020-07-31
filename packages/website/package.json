@@ -1,5 +1,5 @@
 {
-    "name": "ruis-website",
+    "name": "@ruids/website",
     "description": "ruis documentation app",
     "private": true,
     "version": "0.0.0-dev",

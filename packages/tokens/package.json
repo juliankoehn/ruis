@@ -1,6 +1,6 @@
 {
-    "name": "@ruis/tokens",
-    "description": "Ruis Tokens",
+    "name": "@ruids/tokens",
+    "description": "Ruids Tokens",
     "version": "0.0.0-dev",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
