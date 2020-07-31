@@ -1,0 +1,18 @@
+$shadows: xs sm md lg xl 2xl inner outline none;
+$glows: primary negative positive warning;
+
+.shadow {
+    box-shadow: var(--shadow);
+}
+
+@each $shadow in $shadows {
+  .shadow-#{$shadow} {
+    box-shadow: var(--shadow-#{$shadow});
+  }
+}
+
+@each $glow in $glows {
+  .glow-#{$glow} {
+    box-shadow: var(--glow-#{$glow});
+  }
+}

@@ -14,7 +14,9 @@
         "postcss-calc": "^7.0.2",
         "postcss-css-variables": "^0.17.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@ruids/tokens": "^1.0.0"
+    },
     "resolutions": {},
     "scripts": {
         "develop": "node-sass --watch scss/styles.scss -o dist --output-style",

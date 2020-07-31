@@ -1,0 +1,40 @@
+$font-sizes: xs sm base lg xl 2xl 3xl 4xl 5xl 6xl;
+$font-weights: hairline thin light normal medium semibold bold extrabold;
+$line-heigths: none tight snug normal relaxed 3 4 5 6 7 8 9 10;
+$trackings: tighter tight normal wide wider widest;
+
+@each $font-size in $font-sizes {
+  .text-#{$font-size} {
+    font-size: var(--text-#{$font-size});
+  }
+}
+
+@each $font-weight in $font-weights {
+  .font-#{$font-weight} {
+    font-weight: var(--font-#{$font-weight});
+  }
+}
+
+.font-black {
+    font-weight: var(--font-black);
+  }
+
+@each $line-height in $line-heigths {
+  .leading-#{$line-height} {
+    line-height: var(--leading-#{$line-height});
+  }
+}
+
+@each $tracking in $trackings {
+  .tracking-#{$tracking} {
+    letter-spacing: var(--tracking-#{$tracking});
+  }
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}

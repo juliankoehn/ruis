@@ -1,0 +1,24 @@
+$flexs: 1 auto initial none;
+$grows: 0 1;
+$shrinks: 0 1;
+
+@each $flex in $flexs {
+  .flex-#{$flex} {
+    flex: var(--flex-#{$flex});
+  }
+}
+
+.flex-grow-0 {
+    flex-grow: var(--flex-grow-0);
+}
+.flex-grow {
+    flex-grow: var(--flex-grow);
+}
+
+.flex-shrink-0 {
+    flex-shrink: var(--flex-shrink-0);
+}
+
+.flex-shrink {
+    flex-shrink: var(--flex-shrink);
+}

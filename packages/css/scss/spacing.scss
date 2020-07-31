@@ -1,0 +1,53 @@
+$spacings: px 0 1 2 3 4 5 6 8 10 12 16 20 24 32 40 48 56 64;
+
+@each $spacing in $spacings {
+    .mb-#{$spacing} {
+        margin-bottom: var(--spacing-#{$spacing});
+    }
+    .mt-#{$spacing} {
+        margin-top: var(--spacing-#{$spacing});
+    }
+
+    .ml-#{$spacing} {
+        margin-left: var(--spacing-#{$spacing});
+    }
+    .mr-#{$spacing} {
+        margin-right: var(--spacing-#{$spacing});
+    }
+    .pb-#{$spacing} {
+        padding-bottom: var(--spacing-#{$spacing});
+    }
+    .pt-#{$spacing} {
+        padding-top: var(--spacing-#{$spacing});
+    }
+    .pl-#{$spacing} {
+        padding-left: var(--spacing-#{$spacing});
+    }
+    .pr-#{$spacing} {
+        padding-right: var(--spacing-#{$spacing});
+    }
+    .px-#{$spacing} {
+        padding-left: var(--spacing-#{$spacing});
+        padding-right: var(--spacing-#{$spacing});
+    }
+    .py-#{$spacing} {
+        padding-top: var(--spacing-#{$spacing});
+        padding-bottom: var(--spacing-#{$spacing});
+    }
+    .mx-#{$spacing} {
+        margin-left: var(--spacing-#{$spacing});
+        margin-right: var(--spacing-#{$spacing});
+    }
+    .my-#{$spacing} {
+        margin-top: var(--spacing-#{$spacing});
+        margin-bottom: var(--spacing-#{$spacing});
+    }
+
+    .p-#{$spacing} {
+        padding: var(--spacing-#{$spacing});
+    }
+
+    .m-#{$spacing} {
+        margin: var(--spacing-#{$spacing});
+    }
+}

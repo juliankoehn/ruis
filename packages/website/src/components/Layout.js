@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { css } from '@emotion/core';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './Header';
+import Container from './Container';
 
 const styles = {
     main: css`
@@ -55,8 +56,13 @@ const Layout = props => (
                     </Helmet>
 
                     <Header />
-
-                    {props.children}
+                    
+                    <div css={styles.main}>
+                        <Container>
+                            {props.children}
+                        </Container>
+                    </div>
+                    
                 </div>
             )
         }}
