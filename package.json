@@ -8,11 +8,13 @@
         "husky": "^4.2.5",
         "lerna": "^3.22.1",
         "prettier": "^2.0.5",
-        "pretty-quick": "^2.0.1"
+        "pretty-quick": "^2.0.1",
+        "semantic-release": "^17.1.1",
+        "semantic-release-monorepo": "^7.0.2"
     },
     "scripts": {
         "commit": "git-cz",
-        "semantic-release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo",
+        "semantic-release": "lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo",
         "postinstall": "lerna bootstrap && lerna run --scope @ruis/tokens build",
         "commitmsg": "validate-commit-msg",
         "build": "lerna run build",
@@ -31,5 +33,8 @@
             "pre-push": "yarn lint && yarn type-check && yarn test",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
+    },
+    "dependencies": {
+        
     }
 }
