@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@emotion/core": "^10.0.28",
+        "@ruids/tokens": "^1.0.0",
         "@svgr/webpack": "^5.4.0",
         "gatsby": "^2.24.15",
         "gatsby-plugin-emotion": "^4.3.10",
