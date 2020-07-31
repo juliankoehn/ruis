@@ -15,7 +15,7 @@
     "scripts": {
         "commit": "git-cz",
         "semantic-release": "lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo",
-        "postinstall": "lerna bootstrap && lerna run --scope @ruis/tokens build",
+        "postinstall": "lerna bootstrap && lerna run --scope @ruids/tokens build",
         "commitmsg": "validate-commit-msg",
         "build": "lerna run build",
         "test": "lerna run test",
