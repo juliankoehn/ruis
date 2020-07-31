@@ -42,17 +42,5 @@ module.exports = {
         },
         'gatsby-plugin-sharp',
         'gatsby-plugin-emotion',
-        {
-            resolve: `gatsby-plugin-manifest`,
-            options: {
-                name: 'Ruis - Design System',
-                short_name: 'Ruis',
-                start_url: '/',
-                background_color: '#152233',
-                theme_color: '#152233',
-                display: 'minimal-ui',
-                icon: 'src/images/forma-icon.png', // This path is relative to the root of the site.
-            },
-        },
     ]
 }
