@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ruids/tokens@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.0.0.tgz#039a9e7505e9e24deb33228005378f21eb3ada51"
-  integrity sha512-+bdGp7Uby4ZEbwzV1U5yo2FO04fi5u3fZ/rDUE1BjjLILc7ShOxwwIWU25K4hcyrlW7Yf3zJWviMNGjmxsI7Mw==
+"@ruids/tokens@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.1.0.tgz#1a3afc227da5525ecc610482dcabc500e4ea691f"
+  integrity sha512-0q5lUMhHIf2VLVNWu5arqq0fC6FrsYTSrL8ZbiNOjAUeG7LHMKfzqYKFagYRoFBEfY9yfJK9rFqK0cOpbLgIpQ==
 
 abbrev@1:
   version "1.1.1"

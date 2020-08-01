@@ -15,7 +15,7 @@
         "postcss-css-variables": "^0.17.0"
     },
     "dependencies": {
-        "@ruids/tokens": "^1.0.0"
+        "@ruids/tokens": "^1.1.0"
     },
     "resolutions": {},
     "scripts": {

@@ -1,0 +1,71 @@
+$semantic-colors: primary positive negative warning;
+$text-colors: dark base mid light lightest;
+$colors: blue green red yellow;
+
+@each $color in $semantic-colors {
+  .text-#{$color} {
+    color: var(--color-#{$color});
+  }
+
+  .bg-#{$color} {
+    background-color: var(--color-#{$color});
+  }
+}
+
+@each $text-color in $text-colors {
+  .text-#{$text-color} {
+    color: var(--color-text-#{$text-color});
+  }
+}
+
+@each $color in $colors {
+  .text-#{$color}-500 {
+    color: var(--color-#{$color}-500);
+  }
+  .text-#{$color}-400 {
+    color: var(--color-#{$color}-400);
+  }
+  .text-#{$color}-300 {
+    color: var(--color-#{$color}-300);
+  }
+  .text-#{$color}-200 {
+    color: var(--color-#{$color}-200);
+  }
+  .text-#{$color}-100 {
+    color: var(--color-#{$color}-100);
+  }
+  .text-#{$color}-75 {
+    color: var(--color-#{$color}-75);
+  }
+  .text-#{$color}-50 {
+    color: var(--color-#{$color}-50);
+  }
+
+  .bg-#{$color}-500 {
+    background-color: var(--color-#{$color}-500);
+  }
+
+  .bg-#{$color}-400 {
+    background-color: var(--color-#{$color}-400);
+  }
+
+  .bg-#{$color}-300 {
+    background-color: var(--color-#{$color}-300);
+  }
+
+  .bg-#{$color}-200 {
+    background-color: var(--color-#{$color}-200);
+  }
+
+  .bg-#{$color}-100 {
+    background-color: var(--color-#{$color}-100);
+  }
+
+  .bg-#{$color}-75 {
+    background-color: var(--color-#{$color}-75);
+  }
+
+  .bg-#{$color}-50 {
+    background-color: var(--color-#{$color}-50);
+  }
+}
