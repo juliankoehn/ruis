@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import tokens from '@ruids/tokens';
-import { heightOfHeader } from './Navigation';
+import { heightOfHeader } from './Navigation/Navigation';
 import { MDXProvider } from '@mdx-js/react';
 
 const styles = {

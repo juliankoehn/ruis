@@ -4,6 +4,7 @@ import { css } from '@emotion/core';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import Container from './Container';
+import Navigation from './Navigation/Navigation';
 
 const styles = {
     main: css`
@@ -31,6 +32,10 @@ const Layout = props => (
       menuLinks {
         name
         link
+        menuLinks {
+          link
+          name
+        }
       }
     }
   }
@@ -58,6 +63,12 @@ const Layout = props => (
                     <Header />
                     
                     <div css={styles.main}>
+                        <Navigation
+                            menuItems={
+                                data.site.siteMetadata && data.site.siteMetadata.menuLinks
+                            }
+                            currentPath={props && props.location && props.location.pathname}
+                        />
                         <Container>
                             {props.children}
                         </Container>

@@ -8,6 +8,28 @@ module.exports = {
             {
                 name: 'Foundation',
                 link: '',
+                menuLinks: [
+                    {
+                        name: 'Color',
+                        link: '/foundation/color/',
+                    },
+                    {
+                        name: 'Typography',
+                        link: '/foundation/typography/',
+                    },
+                    {
+                        name: 'Spacing',
+                        link: '/foundation/spacing/',
+                    },
+                    {
+                        name: 'Box Shadows',
+                        link: '/foundation/box-shadows/',
+                    },
+                ]
+            },
+            {
+                name: 'Guidelines',
+                link: '',
                 menuLinks: []
             }
         ]

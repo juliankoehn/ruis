@@ -1,0 +1,51 @@
+{
+    "name": "@ruids/components",
+    "version": "0.0.0-dev",
+    "license": "MIT",
+    "files": [
+        "package.json",
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.0",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-react": "^7.10.4",
+        "@babel/preset-typescript": "^7.10.4",
+        "@emotion/babel-preset-css-prop": "^10.0.27",
+        "@emotion/core": "^10.0.28",
+        "@ruids/tokens": "^1.0.0",
+        "@storybook/addon-docs": "^5.3.19",
+        "@storybook/preset-typescript": "^3.0.0",
+        "@storybook/react": "^5.3.19",
+        "@types/classnames": "^2.2.10",
+        "@types/jest": "^26.0.8",
+        "@types/react": "^16.9.43",
+        "@types/react-dom": "^16.9.8",
+        "babel-loader": "^8.1.0",
+        "babel-plugin-css-modules-transform": "^1.6.2",
+        "babel-plugin-typescript-to-proptypes": "^1.4.0",
+        "classnames": "^2.2.6",
+        "css-loader": "^4.2.0",
+        "fork-ts-checker-webpack-plugin": "^5.0.13",
+        "jest": "^26.2.2",
+        "postcss": "^7.0.32",
+        "postcss-import": "^12.0.1",
+        "postcss-preset-env": "^6.7.0",
+        "postcss-url": "^8.0.0",
+        "react": "^16.13.1",
+        "react-docgen-typescript-loader": "^3.7.2",
+        "react-dom": "^16.13.1",
+        "storybook": "^5.3.19",
+        "style-loader": "^1.2.1",
+        "ts-jest": "^26.1.4",
+        "ts-loader": "^8.0.1",
+        "typescript": "^3.9.7",
+        "webpack": "^4.44.1"
+    },
+    "scripts": {
+        "start": "start-storybook -p 9001 -c ./.storybook"
+    }
+}
