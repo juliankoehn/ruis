@@ -1,4 +1,4 @@
-export { Button } from './Button'
+export { Button, ButtonGroup } from './Button'
 export { Icon } from './Icon'
 export { IconButton } from './IconButton'
 export { Spinner } from './Spinner'

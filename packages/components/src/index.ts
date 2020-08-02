@@ -1,5 +1,6 @@
 export {
     Button,
+    ButtonGroup,
     Icon,
     IconButton,
     Spinner

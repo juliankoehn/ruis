@@ -4,6 +4,7 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions';
 import { icons } from '../Icon/Icon';
 import { IconNames } from '../Icon/types';
+import { ButtonGroup } from './ButtonGroup';
 
 export default {
     title: 'Button',
@@ -12,6 +13,35 @@ export default {
 
 const iconNames: IconNames[] = []
 for (let k in icons) iconNames.push(k as any)
+
+export const Group = () => {
+    const buttonType = select(
+        'buttonType',
+        {
+            muted: 'muted',
+            primary: 'primary',
+            positive: 'positive',
+            negative: 'negative',
+            naked: 'naked',
+            warning: 'warning',
+        },
+        'muted',
+    )
+
+    return (
+        <ButtonGroup>
+            <Button buttonType={buttonType}>
+                Left
+            </Button>
+            <Button buttonType={buttonType}>
+                Center
+            </Button>
+            <Button buttonType={buttonType}>
+                Right
+            </Button>
+        </ButtonGroup>
+    )
+}
 
 export const Default = () => {
     const showIcon = boolean('ShowIcon', false)
