@@ -57,9 +57,13 @@ const buildIndexJS = (srcPath, tokens) => {
 
 function createInterfaceDefinition(tokens) {
   const defs = _.mapValues(tokens, value => {
+      let valueType = 'string'
+      if (typeof value === 'number') {
+          valueType = 'number'
+      }
     return {
       value: value,
-      type: 'string',
+        type: valueType,
     };
   });
 
