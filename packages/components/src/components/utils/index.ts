@@ -1,0 +1,1 @@
+export { lightenColor } from './color.lighten'
