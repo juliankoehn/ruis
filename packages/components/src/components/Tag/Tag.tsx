@@ -1,6 +1,7 @@
 import React from 'react'
 import { TagProps, defaultProps } from './types'
 import { getTagStyles } from './styles'
+import { Icon } from '../Icon'
 
 export class Tag extends React.PureComponent<TagProps> {
     static defaultProps = defaultProps
@@ -20,7 +21,10 @@ export class Tag extends React.PureComponent<TagProps> {
                 {...rest}
                 css={getTagStyles(this.props)}
             >
-                {children}
+                <span>{children}</span>
+                {closeable && (
+                    <Icon icon="x" size="tiny" onClick={(e) => onClose(e)} role="button" />
+                )}
             </Component>
         )
     }

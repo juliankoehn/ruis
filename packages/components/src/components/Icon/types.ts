@@ -5,7 +5,6 @@ export type IconNames = keyof typeof icons
 export type IconSize = 'tiny' | 'small' | 'medium' | 'large'
 
 export const defaultProps = {
-    componentClass: 'i',
     size: 'small',
     testId: 'ruids-icon'
 }
@@ -21,4 +20,6 @@ export type IconProps = {
     /** Set SVG style when using custom SVG Icon */
     svgStyle?: React.CSSProperties
     testId?: string
+    onClick?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
+    role?: string
 } & typeof defaultProps

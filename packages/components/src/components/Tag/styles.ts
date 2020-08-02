@@ -40,7 +40,7 @@ const getColors = (props: TagProps) => {
 export const getTagStyles = (props: TagProps) => {
     const { bgColor, textColor } = getColors(props)
     return css({
-        display: 'inline-block',
+        display: 'inline-flex',
         padding: `${tokens.spacing1} ${tokens.spacing2}`,
         borderRadius: `calc(1rem * (3 / ${tokens.fontBaseDefault}))`,
         color: textColor,
@@ -48,6 +48,11 @@ export const getTagStyles = (props: TagProps) => {
         fontFamily: tokens.fontSans,
         fontSize: tokens.textXs,
         lineHeight: tokens.leadingRelaxed,
-        fontWeight: props.bold ? Number(tokens.fontBold) : Number(tokens.fontNormal)
+        fontWeight: props.bold ? Number(tokens.fontBold) : Number(tokens.fontNormal),
+        alignItems: 'center',
+        '> svg:hover': {
+            stroke: tokens.colorRed500,
+            cursor: 'pointer'
+        }
     });
 };

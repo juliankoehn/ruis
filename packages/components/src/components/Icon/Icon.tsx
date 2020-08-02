@@ -23,6 +23,8 @@ export class Icon extends React.Component<IconProps> {
             rotate,
             svgStyle,
             testId,
+            onClick,
+            role,
             ...props
         } = this.props
 
@@ -37,6 +39,8 @@ export class Icon extends React.Component<IconProps> {
                 css={{
                     ...getIconStyles(this.props)
                 }}
+                onClick={onClick}
+                role={role}
             >
                 <path d={iconPath} />
             </svg>

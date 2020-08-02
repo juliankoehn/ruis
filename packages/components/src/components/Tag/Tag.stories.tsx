@@ -12,6 +12,7 @@ export const Default = () => (
         appearance={select('appearance',
             ['default', 'inprogress', 'moved', 'negative', 'success'], 'inprogress')}
         bold={boolean('bold', false)}
+        closeable={boolean('closeable', true)}
     >
         {text('content', 'Awesome')}
     </Tag>)

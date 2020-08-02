@@ -2,7 +2,8 @@ import React from 'react'
 
 export const defaultProps = {
     componentClass: 'div',
-    appearance: 'default'
+    appearance: 'default',
+    onClose: () => {}
 }
 
 export type TagProps = {
@@ -16,5 +17,5 @@ export type TagProps = {
     /** You can use a custom element type for this component */
     componentClass?: React.ElementType;
     /** Click the callback function for the Close button */
-    onClose?: (event: React.MouseEvent<HTMLElement>) => void;
+    onClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
 } & typeof defaultProps
