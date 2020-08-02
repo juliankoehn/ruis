@@ -5,5 +5,6 @@ export {
     IconButton,
     Spinner,
     Tag,
-    TagGroup
+    TagGroup,
+    Portal
 } from './components'
