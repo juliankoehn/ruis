@@ -1,5 +1,4 @@
 import { ButtonProps } from './types'
-// @ts-ignore
 import tokens from '@ruids/tokens'
 import { TypeAttributes } from '../@types/common'
 import { lightenColor } from '../utils'
@@ -158,5 +157,8 @@ export const getLabelStyles = (props: ButtonProps) => ({
     color: 'inherit',
     fontSize: 'inherit',
     fontFamily: tokens.fontSans,
-    fontWeight: tokens.fontMedium,
+    fontWeight: Number(tokens.fontMedium),
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    opacity: props.loading ? 0 : 1
 });
