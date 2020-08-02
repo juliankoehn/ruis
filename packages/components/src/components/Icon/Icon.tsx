@@ -5,6 +5,9 @@ import { getIconStyles } from './styles'
 
 export const icons = {
     'check': 'M5 13l4 4L19 7',
+    'chevron_up': 'M5 15l7-7 7 7',
+    'chevron_left': 'M15 19l-7-7 7-7',
+    'chevron_right': 'M9 5l7 7-7 7',
     'chevron_down': 'M19 9l-7 7-7-7',
     'heart': 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
     'info': 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
