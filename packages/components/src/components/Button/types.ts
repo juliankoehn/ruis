@@ -18,6 +18,7 @@ export interface ButtonProps extends StandardProps, React.ButtonHTMLAttributes<H
     /** A button can show it is currently unable to be interacted with */
     disabled?: boolean;
     indicateDropdown?: boolean
+    block?: boolean
 
     /** Called when the button is clicked. */
     onClick?: (event: React.SyntheticEvent) => void;

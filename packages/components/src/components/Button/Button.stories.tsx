@@ -39,6 +39,7 @@ export const Default = () => {
             )}
             disabled={boolean('disabled', false)}
             loading={boolean('loading', false)}
+            block={boolean('block', false)}
             indicateDropdown={boolean('indicateDropdown', false)}
             onClick={action('onClick')}
             onMouseEnter={action('onMouseEnter')}

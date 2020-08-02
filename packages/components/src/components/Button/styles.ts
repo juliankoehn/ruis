@@ -121,6 +121,8 @@ export const getButtonStyles = (props: ButtonProps) => {
         position: 'relative',
         transition: 'color .2s linear,background-color .3s linear',
         padding: getPadding(props),
+        width: props.block ? '100%' : 'auto',
+        justifyContent: 'space-between',
 
         '&::-moz-focus-inner': {
             border: 0,

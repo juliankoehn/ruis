@@ -7,12 +7,12 @@ export class IconButton extends React.Component<IconButtonProps> {
         const { children, icon, ...rest } = this.props
 
         return (
-            <Button
-                {...rest}
-                iconBefore={icon}
-            >
-                {children}
-            </Button>
+                <Button
+                    {...rest}
+                    iconBefore={icon}
+                >
+                    {children}
+                </Button>
         )
     }
 }
