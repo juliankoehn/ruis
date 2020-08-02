@@ -98,7 +98,14 @@ const staticStyles = {
     backgroundSize: '100% 200%',
     verticalAlign: 'middle',
     textDecoration: 'none',
-    padding: '0.5rem 1rem',
+}
+
+const getPadding = (props: ButtonProps) => {
+    if (props.children) {
+        return '0.5rem 1rem'
+    } else {
+        return '.5rem'
+    }
 }
 
 export const getButtonStyles = (props: ButtonProps) => {
@@ -113,6 +120,7 @@ export const getButtonStyles = (props: ButtonProps) => {
         color: getColor(props),
         position: 'relative',
         transition: 'color .2s linear,background-color .3s linear',
+        padding: getPadding(props),
 
         '&::-moz-focus-inner': {
             border: 0,

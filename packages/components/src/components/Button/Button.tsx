@@ -60,17 +60,20 @@ export const Button = React.forwardRef((props: ButtonProps, ref: React.Ref<HTMLB
                     />
                 </span>
             )}
-            <span
-                css={css({
-                    ...getLabelStyles(props),
-                    whiteSpace: 'nowrap',
-                    textOverflow: 'ellipsis',
-                    overflow: 'hidden',
-                    opacity: loading ? 0 : 1
-                })}
-            >
-                {children}
-            </span>
+            {children && (
+                <span
+                    css={css({
+                        ...getLabelStyles(props),
+                        whiteSpace: 'nowrap',
+                        textOverflow: 'ellipsis',
+                        overflow: 'hidden',
+                        opacity: loading ? 0 : 1
+                    })}
+                >
+                    {children}
+                </span>
+            )}
+            
             {indicateDropdown && (
                 <span
                     css={css({
