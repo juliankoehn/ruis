@@ -80,7 +80,7 @@ function createInterfaceDefinition(tokens) {
 const buildIndexDTS = (srcPath, tokens) => {
   return fse.outputFile(
     srcPath,
-    `declare module '@ruis/tokens' {
+    `declare module '@ruids/tokens' {
       ${createInterfaceDefinition(tokens)}
       const tokens: RTokens;
       export default tokens;
