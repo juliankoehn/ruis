@@ -16,7 +16,7 @@ export interface StandardProps {
 }
 
 export declare namespace TypeAttributes {
-    type Appearance = 'default' | 'primary' | 'link' | 'subtle' | 'ghost'
+    type Appearance = 'primary' | 'positive' | 'negative' | 'warning' | 'muted' | 'naked'
     type Size = 'lg' | 'md' | 'sm' | 'xs'
     type Status = 'success' | 'warning' | 'error' | 'info'
     type Color = 'red' | 'orange' | 'yellow' | 'green' | 'cyan' | 'blue' | 'violet'

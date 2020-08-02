@@ -1,22 +1,24 @@
-import { StandardProps } from '../@types/common'
+import { StandardProps, TypeAttributes } from '../@types/common'
+import { icons } from './Icon'
 
-export type IconNames = 'error'
-
-export interface SVGIcon {
-    viewBox: string;
-    id: string;
-}
+export type IconNames = keyof typeof icons
+export type IconSize = 'tiny' | 'small' | 'medium' | 'large'
 
 export const defaultProps = {
-    componentClass: 'i'
+    componentClass: 'i',
+    size: 'small',
+    testId: 'ruids-icon'
 }
 
 
 export type IconProps = {
+    appearance?: 'primary' | 'positive' | 'negative' | 'warning' | 'white' | 'black'
     /** Icon name */
-    icon: IconNames | SVGIcon
+    icon: IconNames
+    size?: IconSize
     /** Rotate the icon */
     rotate?: number
     /** Set SVG style when using custom SVG Icon */
     svgStyle?: React.CSSProperties
-} & typeof defaultProps & StandardProps
+    testId?: string
+} & typeof defaultProps

@@ -10,14 +10,6 @@
         "@babel/plugin-proposal-class-properties"
     ],
     "env": {
-        "build": {
-            "plugins": [
-                "css-modules-transform",
-                {
-                    "generateScopedName": "[name]__[local]___[hash:base64:5]"
-                }
-            ]
-        },
         "esm": {
             "presets": [
                 [
@@ -28,12 +20,6 @@
                 ]
             ],
             "plugins": [
-                [
-                    "css-modules-transform",
-                    {
-                        "generateScopedName": "[name]__[local]___[hash:base64:5]"
-                    }
-                ],
                 [
                     "@babel/plugin-transform-runtime",
                     {

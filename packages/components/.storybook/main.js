@@ -22,6 +22,8 @@ module.exports = {
                 configureJSX: true,
             },
         },
+        '@storybook/addon-knobs/register',
+        '@storybook/addon-actions/register'
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
