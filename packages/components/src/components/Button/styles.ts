@@ -1,7 +1,8 @@
+import { ButtonProps } from './types'
 // @ts-ignore
 import tokens from '@ruids/tokens'
-import { ButtonProps } from './types'
 import { TypeAttributes } from '../@types/common'
+import { lightenColor } from '../utils'
 
 export function applyPropertyStyle(
     property: keyof typeof baseTheme,
@@ -22,10 +23,6 @@ export function applyPropertyStyle(
 
 const getBackground = (props: ButtonProps) => {
     return applyPropertyStyle('background', { appearance: props.buttonType })
-}
-
-const getBorderColor = (props: ButtonProps) => {
-    return applyPropertyStyle('borderColor', { appearance: props.buttonType })
 }
 
 const getColor = (props: ButtonProps) => {
@@ -104,31 +101,43 @@ const staticStyles = {
     padding: '0.5rem 1rem',
 }
 
-export const getButtonStyles = (props: ButtonProps) => ({
-    ...staticStyles,
-    background: getBackground(props),
-    borderColor: getBorderColor(props),
-    ...getSize(props),
-    opacity: props.disabled ? '0.5' : 1,
-    color: getColor(props),
-    position: 'relative',
+export const getButtonStyles = (props: ButtonProps) => {
+    const backgroundColor = getBackground(props)
+    return {
+        ...staticStyles,
+        backgroundPosition: 'center',
+        backgroundColor: backgroundColor,
+        borderColor: backgroundColor,
+        ...getSize(props),
+        opacity: props.disabled ? '0.5' : 1,
+        color: getColor(props),
+        position: 'relative',
+        transition: 'color .2s linear,background-color .3s linear',
 
-    '&::-moz-focus-inner': {
-        border: 0,
-        margin: 0,
-        padding: 0,
-    },
+        '&::-moz-focus-inner': {
+            border: 0,
+            margin: 0,
+            padding: 0,
+        },
 
-    '&:hover': {
-        cursor: props.disabled ? 'not-allowed' : 'pointer',
-        opacity: props.disabled ? '0.5' : '0.8'
-    },
+        '&:hover': {
+            background: `${backgroundColor} radial-gradient(circle, transparent 1%, ${backgroundColor} 1%) center/15000%`,
+            cursor: props.disabled ? 'not-allowed' : 'pointer',
+            opacity: props.disabled ? '0.5' : '0.8'
+        },
 
-    '&:focus': {
-        outline: 'none',
-        boxShadow: getGlow(props)
+        '&:active': {
+            backgroundColor: `#${lightenColor(backgroundColor, 10)}`,
+            backgroundSize: '100%',
+            transition: 'background 0s'
+        },
+
+        '&:focus': {
+            outline: 'none',
+            boxShadow: getGlow(props)
+        }
     }
-});
+};
 
 export const getLabelStyles = (props: ButtonProps) => ({
     margin: `0 calc(1rem * (4 / ${tokens.fontBaseDefault}))`,
