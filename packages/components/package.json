@@ -2,6 +2,9 @@
     "name": "@ruids/components",
     "version": "0.0.0-dev",
     "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/index.d.ts",
     "files": [
         "package.json",
         "dist"
