@@ -62,7 +62,7 @@ export const Button = React.forwardRef((props: ButtonProps, ref: React.Ref<HTMLB
             )}
             {children && (
                 <span
-                    css={getLabelStyles(props)}
+                    css={{ ...getLabelStyles(props), whiteSpace: 'nowrap'}}
                 >
                     {children}
                 </span>
