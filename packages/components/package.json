@@ -62,7 +62,6 @@
     },
     "scripts": {
         "start": "start-storybook -p 9001 -c ./.storybook",
-        "test": "jest",
         "build:clean": "rm -rf dist esm",
         "build:scripts": "BABEL_ENV=build yarn babel src --out-dir dist --ignore 'src/**/*.stories.js','src/**/*.stories.tsx','src/**/*.test.tsx','src/**/*.test.js','src/**/*.css.d.ts' --extensions '.ts','.tsx','.js'",
         "build:esm": "BABEL_ENV=esm yarn babel src --out-dir esm --ignore 'src/**/*.stories.js','src/**/*.stories.tsx','src/**/*.test.tsx','src/**/*.test.js','src/**/*.css.d.ts' --extensions '.ts','.tsx','.js' && rollup -c rollup.esm.config.js && rm -rf esm",
