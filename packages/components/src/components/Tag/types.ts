@@ -19,3 +19,7 @@ export type TagProps = {
     /** Click the callback function for the Close button */
     onClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
 } & typeof defaultProps
+
+export type TagGroupProps = {
+    children?: React.ReactNode
+}
