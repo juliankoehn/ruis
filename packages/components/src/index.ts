@@ -3,5 +3,6 @@ export {
     ButtonGroup,
     Icon,
     IconButton,
-    Spinner
+    Spinner,
+    Tag
 } from './components'

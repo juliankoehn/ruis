@@ -1568,10 +1568,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@ruids/tokens@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.3.0.tgz#fab3fdd46a886c72f8d6c735efa97a2aea74ef15"
-  integrity sha512-plZBQOsjqFxCLUU6humVSHZE1EYTeMGGuqGE9WiC/XYtNLzyNONiRd71WJH4LoL/GUPCsEr6AZH70bCiBuK3Nw==
+"@ruids/tokens@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.3.1.tgz#691f90e0cee64d61cecefbed07ca88203b4a30c6"
+  integrity sha512-dhkAmNqZN3CoU69jC199fQfF1hh7IY1xPkSVbEyUzEwFtkCOdF8hOs5z2P6mT9cOaPW4XGqBxbjrz1x9lHyDdA==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
