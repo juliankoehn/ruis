@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<div>
+  <p
+    class="css-g3ss1z"
+    data-test-id="ruids-paragraph"
+  >
+    Paragraph
+  </p>
+</div>
+`;
+
+exports[`renders the component span 1`] = `
+<div>
+  <span
+    class="css-1h5b7sa"
+    data-test-id="ruids-paragraph"
+  >
+    Paragraph
+  </span>
+</div>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<div>
+  <p
+    class="my-extra-class css-g3ss1z"
+    data-test-id="ruids-paragraph"
+  >
+    Paragraph
+  </p>
+</div>
+`;

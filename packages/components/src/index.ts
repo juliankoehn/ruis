@@ -6,5 +6,10 @@ export {
     Spinner,
     Tag,
     TagGroup,
-    Portal
+    Portal,
+    Heading,
+    Typography,
+    TypographyConfiguration,
+    TypographyContext,
+    Paragraph
 } from './components'

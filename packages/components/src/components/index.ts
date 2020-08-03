@@ -4,3 +4,10 @@ export { IconButton } from './IconButton'
 export { Spinner } from './Spinner'
 export { Tag, TagGroup } from './Tag'
 export { Portal } from './Portal'
+export {
+    Heading,
+    Typography,
+    TypographyConfiguration,
+    TypographyContext,
+    Paragraph
+} from './Typography'

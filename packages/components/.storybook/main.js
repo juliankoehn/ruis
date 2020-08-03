@@ -23,7 +23,8 @@ module.exports = {
             },
         },
         '@storybook/addon-knobs/register',
-        '@storybook/addon-actions/register'
+        '@storybook/addon-actions/register',
+        '@storybook/addon-jest/register'
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
