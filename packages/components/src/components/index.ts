@@ -7,7 +7,6 @@ export { Portal } from './Portal'
 export {
     Heading,
     Typography,
-    TypographyConfiguration,
     TypographyContext,
     Paragraph
 } from './Typography'

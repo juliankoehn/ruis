@@ -9,7 +9,6 @@ export {
     Portal,
     Heading,
     Typography,
-    TypographyConfiguration,
     TypographyContext,
     Paragraph
 } from './components'
