@@ -12,10 +12,11 @@
         "node-sass": "^4.14.1",
         "postcss": "^7.0.32",
         "postcss-calc": "^7.0.2",
-        "postcss-css-variables": "^0.17.0"
+        "postcss-css-variables": "^0.17.0",
+        "postcss-media-variables": "^2.0.1"
     },
     "dependencies": {
-        "@ruids/tokens": "^1.1.0"
+        "@ruids/tokens": "^1.6.1"
     },
     "resolutions": {},
     "scripts": {
