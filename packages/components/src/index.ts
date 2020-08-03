@@ -8,6 +8,7 @@ export {
     TagGroup,
     Portal,
     Heading,
+    Table,
     Typography,
     TypographyContext,
     Paragraph

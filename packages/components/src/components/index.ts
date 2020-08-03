@@ -10,3 +10,4 @@ export {
     TypographyContext,
     Paragraph
 } from './Typography'
+export { Table } from './Table'
