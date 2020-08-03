@@ -5,7 +5,7 @@ const colorsRed = {
     'color-red-200': '#FF7452',
     'color-red-100': '#FF8F73',
     'color-red-75': '#FFBDAD',
-    'color-red-50': '#FFEBE6',
+    'color-red-50': '#fde9ef',
 };
 
 module.exports = colorsRed;

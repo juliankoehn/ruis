@@ -5,7 +5,7 @@ const colorsGreen = {
     'color-green-200': '#57D9A3',
     'color-green-100': '#79F2C0',
     'color-green-75': '#ABF5D1',
-    'color-green-50': '#E3FCEF',
+    'color-green-50': '#edfae1',
 };
 
 module.exports = colorsGreen;

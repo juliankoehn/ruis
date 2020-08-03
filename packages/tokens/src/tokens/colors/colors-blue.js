@@ -5,7 +5,7 @@ const colorsBlue = {
     'color-blue-200': '#2684FF',
     'color-blue-100': '#4C9AFF',
     'color-blue-75': '#B3D4FF',
-    'color-blue-50': '#DEEBFF',
+    'color-blue-50': '#e9f5fe',
 };
 
 module.exports = colorsBlue;

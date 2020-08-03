@@ -5,7 +5,7 @@ const colorsYellow = {
     'color-yellow-200': '#FFC400',
     'color-yellow-100': '#FFE380',
     'color-yellow-75': '#FFF0B3',
-    'color-yellow-50': '#FFFAE6',
+    'color-yellow-50': '#fff9e6',
 };
 
 module.exports = colorsYellow;
