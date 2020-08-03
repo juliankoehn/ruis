@@ -22,7 +22,13 @@ const buildCssTokens = (srcPath, tokens) => {
 
   const renderTokenTemplate = () =>
     Object.keys(tokens)
-      .map(token => `--${token}: ${tokens[token]};`)
+      .map(token => {
+          // escape sequence
+          // so we can use w-1/2 etc
+          const tkn = tokens[token]
+          token = token.replace('/', '\\/')
+          return `--${token}: ${tkn};`
+      })
       .join(' ');
 
   fse.outputFile(pathName, `:root { ${renderTokenTemplate()} }`);
