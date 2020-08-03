@@ -4,12 +4,9 @@
     "devDependencies": {
         "@commitlint/cli": "^9.1.1",
         "@commitlint/config-conventional": "^9.1.1",
-        "@types/lodash": "^4.14.158",
-        "@types/lodash.isplainobject": "^4.0.6",
         "commitizen": "^4.1.2",
         "husky": "^4.2.5",
         "lerna": "^3.22.1",
-        "lodash.isplainobject": "^4.0.6",
         "prettier": "^2.0.5",
         "pretty-quick": "^2.0.1",
         "semantic-release": "^17.1.1",
@@ -37,8 +34,5 @@
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
-    "dependencies": {
-        "lodash": "^4.17.19",
-        "lodash.flatten": "^4.4.0"
-    }
+    "dependencies": {}
 }
