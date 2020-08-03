@@ -1,5 +1,4 @@
-import { StandardProps, TypeAttributes } from '../@types/common'
-import { icons } from './Icon'
+import { icons } from './icons'
 
 export type IconNames = keyof typeof icons
 export type IconSize = 'tiny' | 'small' | 'medium' | 'large'
