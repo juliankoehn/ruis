@@ -1,0 +1,82 @@
+---
+title: 'Box Shadows'
+---
+
+import boxShadowTokens from '../../../../../tokens/src/tokens/box-shadows/box-shadows'
+import glowTokens from '../../../../../tokens/src/tokens/box-shadows/glow'
+import { Table, Tag } from '@ruids/components'
+
+#### Box Shadows
+
+Box shadows are used to give depth to the user interface.
+
+<Table className="f36-margin-bottom--l">
+  <Table.Head>
+    <Table.Row>
+      <Table.Cell>ClassName</Table.Cell>
+      <Table.Cell>Value</Table.Cell>
+      <Table.Cell>Example</Table.Cell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    {Object.keys(boxShadowTokens).map(token => {
+      const value = boxShadowTokens[token]
+      return (
+        <Table.Row key={token}>
+          <Table.Cell>{token}</Table.Cell>
+          <Table.Cell>
+            <Tag>{value}</Tag>
+          </Table.Cell>
+          <Table.Cell>
+            <div
+              className={token}
+              style={{
+                borderRadius: '.25rem',
+                width: '180px',
+                height: '2.5rem',
+              }}
+            />
+          </Table.Cell>
+        </Table.Row>
+      )
+    })}
+  </Table.Body>
+</Table>
+
+#### Glows
+
+Glows are used to indicate semantic focus states, for example in the
+Button component.
+
+<Table className="f36-margin-bottom--l">
+  <Table.Head>
+    <Table.Row>
+      <Table.Cell>ClassName</Table.Cell>
+      <Table.Cell>Value</Table.Cell>
+      <Table.Cell align="right">Example</Table.Cell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    {Object.keys(glowTokens).map(token => {
+      const value = glowTokens[token]
+      return (
+        <Table.Row key={token}>
+          <Table.Cell>{token}</Table.Cell>
+          <Table.Cell>
+            <Tag>{value}</Tag>
+          </Table.Cell>
+          <Table.Cell align="right">
+            <div
+              className={token}
+              style={{
+                borderRadius: '.25rem',
+                width: '180px',
+                height: '2.5rem',
+              }}
+            />
+          </Table.Cell>
+        </Table.Row>
+      )
+    })}
+  </Table.Body>
+</Table>

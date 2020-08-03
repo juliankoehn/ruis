@@ -2135,22 +2135,29 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@ruids/components@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@ruids/components/-/components-1.4.0.tgz#1efa54964b45687b7bde7a2d015c894142bad35c"
-  integrity sha512-tdormUh0gieJBIDX16oRMk10ftZUtkvVZsMFPXis2hXtrD3gCfKomZLDgu745SxwC/buTdZOW1Bi198WUMiN9A==
-
-"@ruids/css@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@ruids/css/-/css-1.3.0.tgz#8b53d2e11678c6355ae0bdc41ec12d3ad98868a1"
-  integrity sha512-URNdc0MUG8nxoZ0A7mW5r0UUIOq/pdYdKTu06HS9BTOgkrCz1SCKi0agMVnOcIXEvxaVsX+f1Rdb3nBnNkIK3g==
+"@ruids/components@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@ruids/components/-/components-1.7.0.tgz#6e7bdf5d69815adcb3ea0dc1969c4fce3482ab4e"
+  integrity sha512-PbnwhygDKxAg4Ng7nZ5Ym6ZFxm/e+yMFGGU2rBLkKyerMzXIqbnBOVUzHLQD2nGUxTjKH09rmDNpiBYXxt6A3Q==
   dependencies:
-    "@ruids/tokens" "^1.1.0"
+    lodash "^4.17.19"
 
-"@ruids/tokens@^1.1.0", "@ruids/tokens@^1.3.2":
+"@ruids/css@^1.3.2":
   version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.3.2.tgz#d4c69ce3e6dbcd163da04129e64d5b780a50b107"
-  integrity sha512-5W7nkklCL9gGcPE2mkdGFbL1/kzYOQFMz0TQz40VOhC2R5y9CafriAUxHaEnnnt8i+KX+/b0+/DrjZY/nO8+fQ==
+  resolved "https://registry.yarnpkg.com/@ruids/css/-/css-1.3.2.tgz#ad750102485d9b07ae39ae3640e844e834f7cd68"
+  integrity sha512-49OlitA+Aq7a5Wz6W3gKkI9TspnMGSJ1L4frNV1zyB4Krd0BSTFmK+6IS1rcgsWegdZQ09wnEtrWUMmiy/g0/g==
+  dependencies:
+    "@ruids/tokens" "^1.6.1"
+
+"@ruids/tokens@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.6.0.tgz#17782ec1aafb3eede9211d22edf62d8496a0071c"
+  integrity sha512-OmMNsymPf9B996JpmSYy0PJL71Hmm7O0b/qlN+dZOGUnKDacjJHY21a/0di95x2xf5Kn/TNPBGPOlKR43cFXCw==
+
+"@ruids/tokens@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.6.1.tgz#345ec03d4ccafbf011b1c7a1ce34e0629d836373"
+  integrity sha512-9GYO8CxHokDlaukpT9zx8i1qBsWBxjLkkx2kKRO7cGmMICx4adPZT11+2S+VQArq6eTvBlxVX5rYUY5FhleMTw==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"

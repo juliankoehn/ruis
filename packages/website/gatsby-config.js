@@ -1,22 +1,34 @@
 module.exports = {
-    siteMetadata: {
-        title: `ruids - Design System`,
-        description: `Kick off your next project with ruids Design System`,
-        promoText: '',
-        promoLink: '',
-        promoLinkText: '',
+  siteMetadata: {
+    title: `ruids - Design System`,
+    description: `Kick off your next project with ruids Design System`,
+    promoText: '',
+    promoLink: '',
+    promoLinkText: '',
+    menuLinks: [
+      {
+        name: 'Foundation',
+        link: '',
         menuLinks: [
-            {
-                name: 'Foundation',
-                link: '',
-                menuLinks: [
-                    {
-                        name: 'Color',
-                        link: '/foundation/color/',
-                    }
-                ]
-            }
-        ]
+          {
+            name: 'Color',
+            link: '/foundation/color/',
+          },
+          {
+            name: 'Margin',
+            link: '/foundation/margin/',
+          },
+          {
+            name: 'Padding',
+            link: '/foundation/padding/',
+          },
+          {
+            name: 'Box Shadows',
+            link: '/foundation/box-shadows/',
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,22 +41,22 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-      {
-          resolve: 'gatsby-plugin-mdx',
-          options: {
-              defaultLayouts: {
-                  default: require.resolve('./src/components/layout.tsx'),
-              },
-              gatsbyRemarkPlugins: [
-                  {
-                      resolve: `gatsby-remark-images`,
-                      options: {
-                          maxWidth: 912,
-                      },
-                  },
-              ],
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.tsx'),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 912,
+            },
           },
+        ],
       },
+    },
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-plugin-manifest`,
