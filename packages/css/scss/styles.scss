@@ -1,5 +1,12 @@
 @import '../node_modules/@ruids/tokens/dist/scss/index.scss';
 
+body {
+  font-family: var(--font-sans);
+  font-weight: var(--font-normal);
+  font-size: var(--font-base-default);
+  margin: 0;
+}
+
 @import './spacing.scss';
 @import './flex.scss';
 @import './colors.scss';
