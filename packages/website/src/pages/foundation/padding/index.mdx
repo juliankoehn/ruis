@@ -27,7 +27,6 @@ Utilities for controlling an element's margin.
       const valuePx = 1 * parseFloat(value) * 16
       const clearValue = token.replace('spacing-', '')
       const margins = ['p', 'py', 'px', 'pb', 'pt', 'pl', 'pr']
-
       return margins.map(m => (
         <Table.Row key={`${m}-${token}`}>
           <Table.Cell>
