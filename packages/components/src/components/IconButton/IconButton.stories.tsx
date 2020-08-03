@@ -1,9 +1,8 @@
 import React from 'react'
 import { IconButton } from './IconButton'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions';
-import { icons } from '../Icon/Icon';
+import { withKnobs, text, select } from '@storybook/addon-knobs'
 import { IconNames } from '../Icon/types';
+import { icons } from '../Icon/icons';
 
 export default {
     title: 'Button/IconButton',

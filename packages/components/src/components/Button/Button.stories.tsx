@@ -2,9 +2,9 @@ import React from 'react'
 import { Button } from './Button'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions';
-import { icons } from '../Icon/Icon';
 import { IconNames } from '../Icon/types';
 import { ButtonGroup } from './ButtonGroup';
+import { icons } from '../Icon/icons';
 
 export default {
     title: 'Button',
