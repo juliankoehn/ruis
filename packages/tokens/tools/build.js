@@ -22,12 +22,12 @@ const buildCssTokens = (srcPath, tokens) => {
 
   const renderTokenTemplate = () =>
     Object.keys(tokens)
-      .map(token => {
-          // escape sequence
-          // so we can use w-1/2 etc
-          const tkn = tokens[token]
-          token = token.replace('/', '\\/')
-          return `--${token}: ${tkn};`
+      .map((token) => {
+        // escape sequence
+        // so we can use w-1/2 etc
+        const tkn = tokens[token];
+        token = token.replace('/', '\\/');
+        return `--${token}: ${tkn};`;
       })
       .join(' ');
 
@@ -42,7 +42,13 @@ const buildScssTokens = (srcPath, tokens) => {
 
   const renderTokenTemplate = () =>
     Object.keys(tokens)
-      .map(token => `--${token}: ${tokens[token]};`)
+      .map((token) => {
+        // escape sequence
+        // so we can use w-1/2 etc
+        const tkn = tokens[token];
+        token = token.replace('/', '\\/');
+        return `--${token}: ${tkn};`;
+      })
       .join(' ');
 
   fse.outputFile(pathName, `:root { ${renderTokenTemplate()} }`);
@@ -62,14 +68,14 @@ const buildIndexJS = (srcPath, tokens) => {
 };
 
 function createInterfaceDefinition(tokens) {
-  const defs = _.mapValues(tokens, value => {
-      let valueType = 'string'
-      if (typeof value === 'number') {
-          valueType = 'number'
-      }
+  const defs = _.mapValues(tokens, (value) => {
+    let valueType = 'string';
+    if (typeof value === 'number') {
+      valueType = 'number';
+    }
     return {
       value: value,
-        type: valueType,
+      type: valueType,
     };
   });
 
@@ -101,7 +107,7 @@ const buildIndexDTS = (srcPath, tokens) => {
 // Generate Index
 const generateIndex = (paths, extension) => {
   const fileContents = paths
-    .map(srcPath => {
+    .map((srcPath) => {
       let fileName;
 
       if (extension === 'css') {
@@ -127,7 +133,7 @@ const generateIndex = (paths, extension) => {
 
   let allTokens = {};
 
-  paths.forEach(srcPath => {
+  paths.forEach((srcPath) => {
     const tokens = require(path.resolve(srcPath)); // eslint-disable-line
 
     buildJson(srcPath, tokens);
