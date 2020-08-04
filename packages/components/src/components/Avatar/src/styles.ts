@@ -1,6 +1,29 @@
 import { css } from '@emotion/core';
 import tokens from '@ruids/tokens';
 
+export const getAvatarImageStyles = () => {
+  return css`
+    width: ${tokens.width10};
+    height: ${tokens.width10};
+    line-height: ${tokens.width10};
+    position: relative;
+
+    &:before {
+      content: attr(alt);
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      top: 0;
+      left: 0;
+      background: ${tokens.colorNeutral40};
+      text-align: center;
+      padding: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  `;
+};
+
 export const getAvatarStyles = ({
   circle,
   backgroundColor,

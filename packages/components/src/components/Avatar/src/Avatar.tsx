@@ -1,6 +1,6 @@
 import React from 'react';
 import { AvatarProps } from './types';
-import { getAvatarStyles } from './styles';
+import { getAvatarStyles, getAvatarImageStyles } from './styles';
 
 export const Avatar = React.forwardRef(
   (props: AvatarProps, ref: React.Ref<HTMLDivElement>) => {
@@ -38,6 +38,7 @@ export const Avatar = React.forwardRef(
             sizes={sizes}
             srcSet={srcSet}
             alt={alt}
+            css={getAvatarImageStyles}
           />
         ) : (
           children
