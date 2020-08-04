@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Should render avatar 1`] = `
+<div>
+  <div
+    class="css-1b1mwju"
+    data-testid="ruids-avatar"
+  >
+    JK
+  </div>
+</div>
+`;

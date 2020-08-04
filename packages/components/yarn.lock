@@ -1584,10 +1584,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@ruids/tokens@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.5.0.tgz#d73833a52bfadd35503e526c02f86db8f1dd2f41"
-  integrity sha512-yEL6ZYG8QYgmU9nxQ3UxMOIshFh0KBOvF8ohfn1GK40NK8I/btjGmRzLEwNIuwM6gcIhSJBSm1lkNGEMmk0heg==
+"@ruids/tokens@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@ruids/tokens/-/tokens-1.7.0.tgz#886e08df82f049e6f856cdb4e1f09579f65f6ba4"
+  integrity sha512-IiLjr8jPTT09nt/ehjzglCFsfgp51SFZICzFayIvxVD1mIunOZQ6KD3p90yXszq2SVAwQPr/fkcWnnxwU4Z6xQ==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
