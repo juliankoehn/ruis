@@ -23,7 +23,7 @@
         "@babel/preset-typescript": "^7.10.4",
         "@emotion/babel-preset-css-prop": "^10.0.27",
         "@emotion/core": "^10.0.28",
-        "@ruids/tokens": "^1.5.0",
+        "@ruids/tokens": "^1.7.0",
         "@storybook/addon-actions": "^5.3.19",
         "@storybook/addon-docs": "^5.3.19",
         "@storybook/addon-jest": "^5.3.19",
