@@ -6,6 +6,8 @@ import { BackdropProps } from './types';
 import { safeInvoke, preventBodyScroll } from '../../utils';
 import { Transition } from 'react-transition-group';
 import { ANIMATION_DURATION, getBackdropStyles } from './styles';
+import { wrap } from 'lodash';
+import { button } from '@storybook/addon-knobs';
 
 const noop = () => {};
 
@@ -29,7 +31,7 @@ const Backdrop = React.memo<BackdropProps>(function Backdrop({
     setPreviousActiveElement,
   ] = useState<Element | null>(null);
   const [status, setStatus] = useState(isShown ? 'entering' : 'exited');
-  const containerRef = useRef();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isShown) {
@@ -66,8 +68,63 @@ const Backdrop = React.memo<BackdropProps>(function Backdrop({
     }
   }, [status]);
 
-  const bringFocusInsideOverlay = () => {};
-  const bringFocusBackToTarget = () => {};
+  const bringFocusInsideOverlay = () => {
+    // Always delay focus manipulation to just before repaint to prevent scroll jumping
+    return requestAnimationFrame(() => {
+      // Container ref may be undefined between component mounting and Portal rendering
+      // activeElement may be undefined in some rare cases in IE
+
+      if (
+        containerRef.current == null ||
+        document.activeElement == null ||
+        !isShown
+      ) {
+        return;
+      }
+
+      const isFocusOutsideModal = !containerRef.current.contains(
+        document.activeElement,
+      );
+      if (isFocusOutsideModal) {
+        // Element marked autofocus has higher priority than the other clowns
+        const autofocusElement = containerRef.current.querySelector(
+          '[autofocus]',
+        );
+
+        const wrapperElement = containerRef.current.querySelector('[tabindex]');
+        const buttonElement = containerRef.current.querySelector('button');
+
+        if (autofocusElement) {
+          (autofocusElement as HTMLElement).focus();
+        } else if (wrapperElement) {
+          (wrapperElement as HTMLElement).focus();
+        } else if (buttonElement) {
+          (buttonElement as HTMLButtonElement).focus();
+        }
+      }
+    });
+  };
+
+  const bringFocusBackToTarget = () => {
+    return requestAnimationFrame(() => {
+      if (
+        previousActiveElement == null ||
+        containerRef.current == null ||
+        document.activeElement == null
+      ) {
+        return;
+      }
+
+      // Bring back focus on the target.
+      const isFocusInsideModal = containerRef.current.contains(
+        document.activeElement,
+      );
+
+      if (document.activeElement === document.body || isFocusInsideModal) {
+        (previousActiveElement as HTMLElement).focus();
+      }
+    });
+  };
 
   // ComponentWillUnmount
   useEffect(
@@ -147,6 +204,7 @@ const Backdrop = React.memo<BackdropProps>(function Backdrop({
             {(state) => (
               <div
                 onClick={handleBackdropClick}
+                ref={containerRef}
                 css={getBackdropStyles(zIndex)}
                 data-state={state}
               >
@@ -154,7 +212,6 @@ const Backdrop = React.memo<BackdropProps>(function Backdrop({
                   ? // @ts-ignore
                     children({ state, close })
                   : children}
-                {children}
               </div>
             )}
           </Transition>
