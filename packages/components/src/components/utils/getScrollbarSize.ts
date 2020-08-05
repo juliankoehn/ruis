@@ -1,4 +1,4 @@
-export const getScrollbarSize = (): Number => {
+export const getScrollbarSize = (): number => {
   const scrollDiv = document.createElement('div');
   scrollDiv.style.width = '99px';
   scrollDiv.style.height = '99px';
