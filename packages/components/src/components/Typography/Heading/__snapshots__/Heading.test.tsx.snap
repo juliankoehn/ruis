@@ -2,7 +2,7 @@
 
 exports[`renders the component 1`] = `
 <h2
-  className="css-168h6um-finalStyle-Heading"
+  className="css-86q1h8-finalStyle-Heading"
 >
   Heading
 </h2>
@@ -10,7 +10,7 @@ exports[`renders the component 1`] = `
 
 exports[`renders the component h3 1`] = `
 <h3
-  className="css-168h6um-finalStyle-Heading"
+  className="css-86q1h8-finalStyle-Heading"
 >
   Heading
 </h3>
@@ -18,7 +18,7 @@ exports[`renders the component h3 1`] = `
 
 exports[`renders the component with an additional class name 1`] = `
 <h2
-  className="my-extra-class css-168h6um-finalStyle-Heading"
+  className="my-extra-class css-86q1h8-finalStyle-Heading"
 >
   Heading
 </h2>

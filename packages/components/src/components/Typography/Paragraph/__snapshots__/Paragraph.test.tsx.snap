@@ -3,7 +3,7 @@
 exports[`renders the component 1`] = `
 <div>
   <p
-    class="css-f09e0o-Paragraph"
+    class="css-1wc8m2q-Paragraph"
   >
     Paragraph
   </p>
@@ -13,7 +13,7 @@ exports[`renders the component 1`] = `
 exports[`renders the component lg 1`] = `
 <div>
   <p
-    class="css-1m93k0s-Paragraph"
+    class="css-13i19vl-Paragraph"
   >
     Paragraph
   </p>
@@ -23,7 +23,7 @@ exports[`renders the component lg 1`] = `
 exports[`renders the component with an additional class name 1`] = `
 <div>
   <p
-    class="my-extra-class css-f09e0o-Paragraph"
+    class="my-extra-class css-1wc8m2q-Paragraph"
   >
     Paragraph
   </p>

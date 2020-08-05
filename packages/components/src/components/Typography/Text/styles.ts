@@ -44,8 +44,8 @@ export const getTextStyle = (
         ...textSizes.lg,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       });
     }
     case 'md': {
@@ -53,8 +53,8 @@ export const getTextStyle = (
         ...textSizes.md,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       });
     }
     case 'sm': {
@@ -62,8 +62,8 @@ export const getTextStyle = (
         ...textSizes.sm,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       });
     }
     case 'xs': {
@@ -71,8 +71,8 @@ export const getTextStyle = (
         ...textSizes.xs,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       });
     }
   }

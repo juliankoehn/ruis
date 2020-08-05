@@ -20,6 +20,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextDark,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case '2xl': {
@@ -33,6 +35,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextDark,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case 'xl': {
@@ -46,6 +50,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextDark,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case 'lg': {
@@ -59,6 +65,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextDark,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case 'md': {
@@ -72,6 +80,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextDark,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case 'sm': {
@@ -85,6 +95,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextDark,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case 'xs': {
@@ -98,6 +110,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextLight,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
     case 'xss': {
@@ -112,6 +126,8 @@ export const getHeadingStyles = (
         marginBottom: 0,
         fontFamily: fontFace,
         color: tokens.colorTextLight,
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
       };
     }
   }

@@ -15,8 +15,8 @@ export const getParagraphStyles = (
         lineHeight: tokens.leading6,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
         marginBottom: 0,
       });
     }
@@ -26,8 +26,8 @@ export const getParagraphStyles = (
         lineHeight: tokens.leading6,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
         marginBottom: 0,
       });
     }
@@ -37,8 +37,8 @@ export const getParagraphStyles = (
         lineHeight: tokens.leading6,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
         marginBottom: 0,
       });
     }
@@ -48,8 +48,8 @@ export const getParagraphStyles = (
         lineHeight: tokens.leading6,
         fontFamily: fontFamily,
         color: tokens.colorTextDark,
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
+        WebkitFontSmoothing: 'auto',
+        MozOsxFontSmoothing: 'auto',
         marginBottom: 0,
       });
     }
