@@ -3,6 +3,7 @@ import {
   TransitionProps,
   TransitionStatus,
 } from 'react-transition-group/Transition';
+import { SerializedStyles } from '@emotion/core';
 
 type ReactNodeWithProps = (props: {
   state: TransitionStatus;
@@ -26,4 +27,5 @@ export type BackdropProps = {
   onEnter?: TransitionProps['onEnter'];
   onEntering?: TransitionProps['onEntering'];
   onEntered?: TransitionProps['onEntered'];
+  containerStyles?: SerializedStyles;
 };

@@ -1,4 +1,5 @@
-import '@babel/polyfill'
-import { axe, toHaveNoViolations } from 'jest-axe'
+import '@babel/polyfill';
+import '@testing-library/jest-dom';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
-expect.extend(toHaveNoViolations)
+expect.extend(toHaveNoViolations);

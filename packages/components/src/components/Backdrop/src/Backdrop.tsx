@@ -24,6 +24,7 @@ const Backdrop = React.memo<BackdropProps>(function Backdrop({
   onEntering = noop,
   onEntered = noop,
   isShown,
+  containerStyles,
   ...props
 }) {
   const [
@@ -205,7 +206,7 @@ const Backdrop = React.memo<BackdropProps>(function Backdrop({
               <div
                 onClick={handleBackdropClick}
                 ref={containerRef}
-                css={getBackdropStyles(zIndex)}
+                css={[getBackdropStyles(zIndex), containerStyles]}
                 data-state={state}
               >
                 {typeof children === 'function'

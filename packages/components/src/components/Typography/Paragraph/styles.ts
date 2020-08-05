@@ -17,6 +17,7 @@ export const getParagraphStyles = (
         color: tokens.colorTextDark,
         '-webkit-font-smoothing': 'auto',
         '-moz-osx-font-smoothing': 'auto',
+        marginBottom: 0,
       });
     }
     case 'sm': {
@@ -27,6 +28,7 @@ export const getParagraphStyles = (
         color: tokens.colorTextDark,
         '-webkit-font-smoothing': 'auto',
         '-moz-osx-font-smoothing': 'auto',
+        marginBottom: 0,
       });
     }
     case 'md': {
@@ -37,6 +39,7 @@ export const getParagraphStyles = (
         color: tokens.colorTextDark,
         '-webkit-font-smoothing': 'auto',
         '-moz-osx-font-smoothing': 'auto',
+        marginBottom: 0,
       });
     }
     case 'lg': {
@@ -47,6 +50,7 @@ export const getParagraphStyles = (
         color: tokens.colorTextDark,
         '-webkit-font-smoothing': 'auto',
         '-moz-osx-font-smoothing': 'auto',
+        marginBottom: 0,
       });
     }
   }
