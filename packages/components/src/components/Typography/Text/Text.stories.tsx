@@ -1,10 +1,10 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Paragraph from './Paragraph';
+import Text from './Text';
 import { TypeAttributes } from '../../@types/common';
 
 export default {
-  title: 'Typography/Paragraph',
+  title: 'Typography/Text',
   decorators: [withKnobs],
 };
 
@@ -15,9 +15,11 @@ export const Default = () => {
   return (
     <div>
       {sizes.map((size) => (
-        <Paragraph size={size}>
-          {size}: {dummyText}{' '}
-        </Paragraph>
+        <div>
+          <Text size={size}>
+            {size}: {dummyText}
+          </Text>
+        </div>
       ))}
     </div>
   );

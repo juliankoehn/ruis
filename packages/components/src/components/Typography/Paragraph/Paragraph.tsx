@@ -1,35 +1,17 @@
-import React from 'react'
-import { ParagraphProps, defaultProps } from './types'
-import { TypographyContext } from '../Typography'
-import { getParagraphStyles } from './styles'
+import React from 'react';
+import { TextProps } from '../Text/types';
+import { getParagraphStyles } from './styles';
 
-export class Paragraph extends React.Component<ParagraphProps> {
-    static defaultProps = defaultProps
+const Paragraph = React.forwardRef(
+  (props: TextProps, ref: React.Ref<HTMLParagraphElement>) => {
+    const { className, css, size = 'sm', fontFamily = 'sans', ...rest } = props;
 
-    render() {
-        const {
-            className,
-            children,
-            is,
-            testId,
-            ...otherProps
-        } = this.props
-        const Element = is
+    const textStyle = getParagraphStyles(size, fontFamily);
 
-        
-        return (
-            <TypographyContext.Consumer>
-                {value => (
-                    <Element
-                        className={className}
-                        data-test-id={testId}
-                        {...otherProps}
-                        css={getParagraphStyles(value.paragraph.spacing, is)}
-                    >
-                        {children}
-                    </Element>
-                )}
-            </TypographyContext.Consumer>
-        )
-    }
-}
+    return (
+      <p ref={ref} className={className} css={[textStyle, css]} {...rest} />
+    );
+  },
+);
+
+export default Paragraph;

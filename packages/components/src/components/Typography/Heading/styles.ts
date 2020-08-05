@@ -1,63 +1,118 @@
-import { css } from '@emotion/core'
-import tokens from '@ruids/tokens'
-import { HeadingTypes } from './types';
+import tokens from '@ruids/tokens';
+import { HeadingSize } from './types';
+import { TypeAttributes } from '../../@types/common';
 
-const getFontStyles = (element: HeadingTypes) => {
-    switch (element) {
-        case 'h1': {
-            return {
-                size: tokens.text6Xl,
-                weight: tokens.fontNormal,
-                leading: tokens.leadingTight
-            }
-        }
-        case 'h2': {
-            return {
-                size: tokens.text5Xl,
-                weight: tokens.fontNormal,
-                leading: tokens.leadingTight
-            }
-        }
-        case 'h3': {
-            return {
-                size: tokens.text4Xl,
-                weight: tokens.fontMedium,
-                leading: tokens.leadingTight
-            }
-        }
-        case 'h4': {
-            return {
-                size: tokens.text3Xl,
-                weight: tokens.fontSemibold,
-                leading: tokens.leadingTight
-            }
-        }
-        case 'h5': {
-            return {
-                size: tokens.text2Xl,
-                weight: tokens.fontBold,
-                leading: tokens.leadingTight
-            }
-        }
-        case 'h6': {
-            return {
-                size: tokens.textXl,
-                weight: tokens.fontBold,
-                leading: tokens.leadingTight
-            }
-        }
+export const getHeadingStyles = (
+  size: HeadingSize,
+  fontFamily: TypeAttributes.FontFamily,
+) => {
+  const fontFace = fontFamily === 'sans' ? tokens.fontSans : tokens.fontMono;
+
+  switch (size) {
+    case '3xl': {
+      // 900
+      return {
+        fontSize: tokens.text4Xl,
+        fontWeight: tokens.fontMedium,
+        lineHeight: tokens.leading10,
+        letterSpacing: tokens.trackingNormal,
+        marginTop: tokens.spacing12,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextDark,
+      };
     }
-}
-
-export const getHeadingStyles = (spacing: string, element: HeadingTypes) => {
-    const fontStyle = getFontStyles(element)
-    return css`
-        font-family: ${tokens.fontSans};
-        color: ${tokens.colorTextDark};
-        margin-top: 0;
-        margin-bottom: ${tokens[spacing]};
-        font-weight: ${fontStyle?.weight};
-        font-size: ${fontStyle?.size};
-        line-height: ${fontStyle?.leading};
-    `
+    case '2xl': {
+      // 800
+      return {
+        fontSize: tokens.text3Xl,
+        fontWeight: tokens.fontMedium,
+        lineHeight: tokens.leading8,
+        letterSpacing: tokens.trackingNormal,
+        marginTop: tokens.spacing10,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextDark,
+      };
+    }
+    case 'xl': {
+      // 700
+      return {
+        fontSize: tokens.text2Xl,
+        fontWeight: tokens.fontMedium,
+        lineHeight: tokens.leading7,
+        letterSpacing: tokens.trackingTighter,
+        marginTop: tokens.spacing10,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextDark,
+      };
+    }
+    case 'lg': {
+      // 600
+      return {
+        fontSize: tokens.textXl,
+        fontWeight: tokens.fontMedium,
+        lineHeight: tokens.leading6,
+        letterSpacing: tokens.trackingTighter,
+        marginTop: tokens.spacing6,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextDark,
+      };
+    }
+    case 'md': {
+      // 500
+      return {
+        fontSize: tokens.textBase,
+        fontWeight: tokens.fontMedium,
+        lineHeight: tokens.leading5,
+        letterSpacing: tokens.trackingTight,
+        marginTop: tokens.spacing6,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextDark,
+      };
+    }
+    case 'sm': {
+      // 400
+      return {
+        fontSize: tokens.textSm,
+        fontWeight: tokens.fontSemibold,
+        lineHeight: tokens.leading5,
+        letterSpacing: tokens.trackingTight,
+        marginTop: tokens.spacing4,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextDark,
+      };
+    }
+    case 'xs': {
+      // 200
+      return {
+        fontSize: tokens.textXs,
+        fontWeight: tokens.fontSemibold,
+        lineHeight: tokens.leading4,
+        letterSpacing: tokens.trackingNormal,
+        marginTop: tokens.spacing4,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextLight,
+      };
+    }
+    case 'xss': {
+      // 100
+      return {
+        fontSize: tokens.textXs,
+        fontWeight: tokens.fontNormal,
+        textTransform: 'uppercase',
+        lineHeight: tokens.leading4,
+        letterSpacing: tokens.trackingWidest,
+        marginTop: tokens.spacing4,
+        marginBottom: 0,
+        fontFamily: fontFace,
+        color: tokens.colorTextLight,
+      };
+    }
+  }
 };

@@ -3,30 +3,27 @@
 exports[`renders the component 1`] = `
 <div>
   <p
-    class="css-g3ss1z"
-    data-test-id="ruids-paragraph"
+    class="css-f09e0o-Paragraph"
   >
     Paragraph
   </p>
 </div>
 `;
 
-exports[`renders the component span 1`] = `
+exports[`renders the component lg 1`] = `
 <div>
-  <span
-    class="css-1h5b7sa"
-    data-test-id="ruids-paragraph"
+  <p
+    class="css-1m93k0s-Paragraph"
   >
     Paragraph
-  </span>
+  </p>
 </div>
 `;
 
 exports[`renders the component with an additional class name 1`] = `
 <div>
   <p
-    class="my-extra-class css-g3ss1z"
-    data-test-id="ruids-paragraph"
+    class="my-extra-class css-f09e0o-Paragraph"
   >
     Paragraph
   </p>

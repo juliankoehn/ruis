@@ -2,8 +2,7 @@
 
 exports[`renders the component 1`] = `
 <h2
-  className="css-41y8r1"
-  data-test-id="ruids-heading"
+  className="css-168h6um-finalStyle-Heading"
 >
   Heading
 </h2>
@@ -11,8 +10,7 @@ exports[`renders the component 1`] = `
 
 exports[`renders the component h3 1`] = `
 <h3
-  className="css-f4lcri"
-  data-test-id="ruids-heading"
+  className="css-168h6um-finalStyle-Heading"
 >
   Heading
 </h3>
@@ -20,8 +18,7 @@ exports[`renders the component h3 1`] = `
 
 exports[`renders the component with an additional class name 1`] = `
 <h2
-  className="my-extra-class css-41y8r1"
-  data-test-id="ruids-heading"
+  className="my-extra-class css-168h6um-finalStyle-Heading"
 >
   Heading
 </h2>

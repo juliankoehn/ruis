@@ -1,12 +1,15 @@
+import React from 'react';
 import { TypeAttributes } from '../../@types/common';
 import { SerializedStyles } from '@emotion/core';
 
-export type ParagraphProps = {
+export type TextProps = {
+  /**
+   * Size of the text style
+   * Can be: xs, sm, md, lg
+   */
   size?: TypeAttributes.Size;
   fontFamily?: TypeAttributes.FontFamily;
+  children: React.ReactNode;
   css?: SerializedStyles;
-
-  testId?: string;
   className?: string;
-  children?: React.ReactNode;
 };
