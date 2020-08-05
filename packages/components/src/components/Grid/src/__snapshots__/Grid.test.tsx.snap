@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid Should render a container 1`] = `
+<div>
+  <div
+    class="css-1lvpr75-GridStyles-fluidStyles"
+  >
+    Test
+  </div>
+</div>
+`;
