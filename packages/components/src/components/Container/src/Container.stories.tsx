@@ -1,12 +1,12 @@
 import React from 'react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import Grid from './Grid';
+import Container from './Container';
 
 export default {
-  title: 'Layout/Grid',
+  title: 'Layout/Container',
   decorators: [withKnobs],
 };
 
 export const Default = () => (
-  <Grid fluid={boolean('fluid', false)}>inside of a grid</Grid>
+  <Container fluid={boolean('fluid', false)}>inside of a grid</Container>
 );

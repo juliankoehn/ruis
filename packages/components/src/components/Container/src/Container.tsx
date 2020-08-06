@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import tokens from '@ruids/tokens';
 
-const GridStyles = css({
+const ContainerStyles = css({
   width: '100%',
   marginRight: 'auto',
   marginLeft: 'auto',
@@ -25,13 +25,13 @@ const fluidStyles = css`
   }
 `;
 
-const Grid = React.forwardRef(
+const Container = React.forwardRef(
   (
     props: { fluid?: boolean; children: React.ReactNode },
     ref: React.Ref<HTMLDivElement>,
   ) => {
     const { fluid, ...rest } = props;
-    const styles = [GridStyles];
+    const styles = [ContainerStyles];
     if (!fluid) {
       styles.push(fluidStyles);
     }
@@ -39,4 +39,4 @@ const Grid = React.forwardRef(
   },
 );
 
-export default Grid;
+export default Container;

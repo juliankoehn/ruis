@@ -3,6 +3,7 @@ export {
   Backdrop,
   Button,
   ButtonGroup,
+  Container,
   Icon,
   IconButton,
   Modal,

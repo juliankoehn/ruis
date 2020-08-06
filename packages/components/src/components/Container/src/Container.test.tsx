@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Grid from './Grid';
+import Container from './Container';
 
-describe('Grid', () => {
+describe('Container', () => {
   it('Should render a container', () => {
     let title = 'Test';
-    const { container } = render(<Grid>{title}</Grid>);
+    const { container } = render(<Container>{title}</Container>);
 
     expect(container).toMatchSnapshot();
   });
