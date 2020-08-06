@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Should render a container 1`] = `
+<div>
+  <div
+    class="css-5x7jti-ContainerStyles-fluidStyles"
+  >
+    Test
+  </div>
+</div>
+`;

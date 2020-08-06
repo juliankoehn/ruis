@@ -2,7 +2,6 @@ const postcss = require('postcss');
 const mediaVariables = require('postcss-media-variables');
 const cssvariables = require('postcss-css-variables');
 const calc = require('postcss-calc');
-
 const fs = require('fs');
 
 const css = fs.readFileSync('dist/styles.css', 'utf8');
