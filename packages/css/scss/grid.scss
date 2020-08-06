@@ -1,0 +1,196 @@
+$screens: sm md lg xl;
+$GridTemplateRows: 1 2 3 4 5 6 7 8 9 10 11 12;
+$GridTemplateColumns: 1 2 3 4 5 6 7 8 9 10 11 12;
+$gaps: 0 1 2 3 4 5 6 8 10 12 16 20 24 32 40 48 56 65 px;
+$gridRow: 1 2 3 4 5 6;
+$gridRowStart: 1 2 3 4 5 6 7 auto;
+$gridColumn: 1 2 3 4 5 6 7 8 9 10 11 12;
+$gridColumnStart: 1 2 3 4 5 6 7 8 9 10 11 12 13 auto;
+
+.grid-rows-none {
+         grid-template-rows: none;
+}
+
+.grid-cols-none {
+         grid-template-columns: none;
+}
+
+.grid-flow-row {
+    grid-auto-flow: row;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+.grid-flow-row-dense {
+    grid-auto-flow: row dense;
+}
+.grid-flow-col-dense {
+    grid-auto-flow: column dense;
+}
+
+.row-auto {
+    grid-row: auto;
+}
+
+.col-auto {
+    grid-column: auto;
+}
+
+@each $row in $gridRow {
+    .row-span-#{$row} {
+         grid-row: span #{$row} / span #{$row};
+    }
+}
+
+@each $col in $gridColumn {
+    .col-span-#{$col} {
+         grid-column: span #{$col} / span #{$col};
+    }
+}
+
+.row-start-auto {
+    grid-row: auto;
+}
+
+.row-end-auto {
+    grid-row: auto;
+}
+
+@each $row in $gridRowStart {
+    .row-start-#{$row} {
+         grid-row-start: #{$row};
+    }
+    .row-end-#{$row} {
+         grid-row-end: #{$row};
+    }
+}
+
+@each $col in $gridColumnStart {
+    .col-start-#{$col} {
+         grid-column-start: #{$col};
+    }
+    .col-end-#{$col} {
+         grid-column-end: #{$col};
+    }
+}
+
+@each $row in $GridTemplateRows {
+    .grid-rows-#{$row} {
+         grid-template-rows: repeat(#{$row}, minmax(0, 1fr));
+    }
+}
+
+@each $col in $GridTemplateColumns {
+    .grid-cols-#{$col} {
+         grid-template-columns: repeat(#{$col}, minmax(0, 1fr));
+    }
+}
+
+@each $gap in $gaps {
+    .gap-#{$gap} {
+         gap: var(--spacing-#{$gap});
+    }
+    .row-gap-#{$gap} {
+         row-gap: var(--spacing-#{$gap});
+    }
+    .col-gap-#{$gap} {
+         row-gap: var(--spacing-#{$gap});
+    }
+}
+
+@each $screen in $screens {
+    @media(min-width: var(--screen-#{$screen})) {
+        .#{$screen}#{'\\'}:grid-rows-none {
+            grid-template-rows: none;
+        }
+
+        .#{$screen}#{'\\'}:grid-cols-none {
+            grid-template-columns: none;
+        }
+        @each $row in $GridTemplateRows {
+            .#{$screen}#{'\\'}:grid-rows-#{$row} {
+                grid-template-rows: repeat(#{$row}, minmax(0, 1fr));
+            }
+        }
+
+        @each $col in $GridTemplateColumns {
+            .#{$screen}#{'\\'}:grid-cols-#{$col} {
+                grid-template-columns: repeat(#{$col}, minmax(0, 1fr));
+            }
+        }
+
+        @each $gap in $gaps {
+            .#{$screen}#{'\\'}:gap-#{$gap} {
+                gap: var(--spacing-#{$gap});
+            }
+            .#{$screen}#{'\\'}:row-gap-#{$gap} {
+                row-gap: var(--spacing-#{$gap});
+            }
+            .#{$screen}#{'\\'}:col-gap-#{$gap} {
+                row-gap: var(--spacing-#{$gap});
+            }
+        }
+
+        .#{$screen}#{'\\'}:grid-flow-row {
+            grid-auto-flow: row;
+        }
+
+        .#{$screen}#{'\\'}:grid-flow-col {
+            grid-auto-flow: column;
+        }
+        .#{$screen}#{'\\'}:grid-flow-row-dense {
+            grid-auto-flow: row dense;
+        }
+        .#{$screen}#{'\\'}:grid-flow-col-dense {
+            grid-auto-flow: column dense;
+        }
+
+        .#{$screen}#{'\\'}:row-auto {
+            grid-row: auto;
+        }
+
+        @each $row in $gridRow {
+            .#{$screen}#{'\\'}:row-span-#{$row} {
+                grid-row: span #{$row} / span #{$row};
+            }
+        }
+
+        .#{$screen}#{'\\'}:row-start-auto {
+            grid-row: auto;
+        }
+
+        .#{$screen}#{'\\'}:row-end-auto {
+            grid-row: auto;
+        }
+
+        @each $row in $gridRowStart {
+            .#{$screen}#{'\\'}:row-start-#{$row} {
+                grid-row-start: #{$row};
+            }
+            .#{$screen}#{'\\'}:row-end-#{$row} {
+                grid-row-end: #{$row};
+            }
+        }
+
+        .#{$screen}#{'\\'}:col-auto {
+            grid-column: auto;
+        }
+
+        @each $col in $gridColumn {
+            .#{$screen}#{'\\'}:col-span-#{$col} {
+                grid-column: span #{$col} / span #{$col};
+            }
+        }
+
+        @each $col in $gridColumnStart {
+            .#{$screen}#{'\\'}:col-start-#{$col} {
+                grid-column-start: #{$col};
+            }
+            .#{$screen}#{'\\'}:col-end-#{$col} {
+                grid-column-end: #{$col};
+            }
+        }
+        
+    }
+}

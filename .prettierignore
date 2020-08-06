@@ -1,4 +1,4 @@
 package.json
 *.hbs
 *.css.d.ts
-width.scss
+*.scss
