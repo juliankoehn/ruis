@@ -25,7 +25,7 @@
 **/.rts2_cache_umd
 **/.rts2_cache_system
 **/.jest-test-results.json
-
+**/coverage
 # editors
 .vscode/
 .idea/

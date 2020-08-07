@@ -34,6 +34,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       onBlur,
       elemAfterInput,
       elemBeforeInput,
+
       ...rest
     } = props;
     const [hovered, setHovered] = useState(false);

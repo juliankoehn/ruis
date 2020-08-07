@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import { Input } from './Input';
 
@@ -38,5 +38,21 @@ describe('Input', () => {
 
     expect(inputRef.current).not.toBeUndefined();
     expect(inputRef.current?.hasAttribute('required')).toBeTruthy();
+  });
+
+  it('should be focused', () => {
+    const focusSpy = jest.fn();
+    const blurSpy = jest.fn();
+
+    const inputRef = React.createRef<HTMLInputElement>();
+    const { container } = render(
+      <Input ref={inputRef} onFocus={focusSpy} onBlur={blurSpy} />,
+    );
+    expect(focusSpy).toHaveBeenCalledTimes(0);
+    expect(blurSpy).toHaveBeenCalledTimes(0);
+    container.querySelector('input')?.focus();
+    expect(focusSpy).toHaveBeenCalledTimes(1);
+    container.querySelector('input')?.blur();
+    expect(blurSpy).toHaveBeenCalledTimes(1);
   });
 });
