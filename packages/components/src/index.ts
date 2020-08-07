@@ -20,4 +20,5 @@ export {
   Typography,
   TypographyContext,
   Paragraph,
+  Popper,
 } from './components';

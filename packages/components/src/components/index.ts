@@ -19,3 +19,4 @@ export { Table } from './Table';
 
 export { Stack, StackingContext } from './Stack';
 export { Backdrop } from './Backdrop';
+export { Popper } from './Popper';
