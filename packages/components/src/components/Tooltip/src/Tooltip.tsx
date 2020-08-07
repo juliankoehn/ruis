@@ -9,7 +9,7 @@ export type TooltipProps = {
   children: React.ReactElement;
 };
 export const Tooltip: React.FC<TooltipProps> = ({ children, content }) => {
-  const [isShown, setShown] = useState(true);
+  const [isShown, setShown] = useState(false);
 
   return (
     <div>

@@ -4,12 +4,15 @@ import { SideNavbarProps, NavItem } from './types';
 import { Button } from '../../Button';
 import { IconButton } from '../../IconButton';
 import { Icon } from '../../Icon';
+import { Tooltip } from '../../Tooltip';
 
 const Item: React.FC<NavItem> = ({ label, icon, to }) => {
   return (
-    <a href={to} css={styles.navItem}>
-      <Icon icon={icon} />
-    </a>
+    <Tooltip content={label}>
+      <a href={to} css={styles.navItem}>
+        <Icon icon={icon} />
+      </a>
+    </Tooltip>
   );
 };
 
