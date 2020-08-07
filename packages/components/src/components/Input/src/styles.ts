@@ -23,6 +23,18 @@ const input = css`
   width: 100%;
   height: ${tokens.spacing10};
   line-height: ${tokens.leadingNormal};
+
+  &::-ms-clear: {
+    display: none;
+  }
+  &:invalid: {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: ${tokens.colorNeutral50};
+    opacity: 1;
+  }
 `;
 
 const getContainerBackgroundColor = (props: ContainerProps) => {
@@ -85,7 +97,7 @@ const container = (props: ContainerProps) => {
     border-width: 2px;
     border-style: solid;
     color: rgb(9, 30, 66);
-    cursor: text;
+    cursor: ${props.disabled ? 'not-allowed' : 'text'};
     display: flex;
     font-size: ${tokens.textBase};
     justify-content: space-between;

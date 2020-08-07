@@ -25,6 +25,7 @@ export const Default = () => {
         onChange={(e: React.FormEvent<HTMLInputElement>) =>
           setValue(e.currentTarget.value)
         }
+        placeholder="hello world"
       />
     </div>
   );
