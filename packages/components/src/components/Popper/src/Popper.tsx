@@ -15,15 +15,15 @@ export interface PopperProps {
 export const Popper: React.FC<PopperProps> = ({
   trigger,
   children,
-  placement = 'bottom',
-  offset = [0, 8],
+  placement,
+  offset,
 }) => {
-  const referenceElement = useRef<any>();
+  const [referenceElement, setReferenceElement] = useState<any>();
   const popperElement = useRef<any>();
 
   const options: Options = useMemo(() => {
     return {
-      placement: placement,
+      placement: placement ?? 'bottom',
       strategy: 'fixed',
       modifiers: [
         {
@@ -47,7 +47,7 @@ export const Popper: React.FC<PopperProps> = ({
   }, [placement, offset]);
 
   const { styles, attributes } = usePopper(
-    referenceElement.current,
+    referenceElement,
     popperElement.current,
     options,
   );
@@ -57,7 +57,7 @@ export const Popper: React.FC<PopperProps> = ({
       {/** trigger element */}
       {React.cloneElement(trigger, {
         ...trigger.props,
-        ref: referenceElement,
+        ref: setReferenceElement,
       })}
       <Portal>
         {children &&
@@ -70,4 +70,9 @@ export const Popper: React.FC<PopperProps> = ({
       </Portal>
     </React.Fragment>
   );
+};
+
+Popper.defaultProps = {
+  placement: 'bottom',
+  offset: [0, 8],
 };

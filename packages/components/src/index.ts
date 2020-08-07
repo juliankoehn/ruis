@@ -21,4 +21,5 @@ export {
   TypographyContext,
   Paragraph,
   Popper,
+  Tooltip,
 } from './components';
