@@ -6,6 +6,7 @@ export {
   Container,
   Icon,
   IconButton,
+  Input,
   Modal,
   Spinner,
   Tag,

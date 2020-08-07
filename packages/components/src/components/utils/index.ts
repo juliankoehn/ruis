@@ -9,3 +9,6 @@ export { ownerWindow } from './ownerWindow';
 
 export { default as safeInvoke } from './safeInvoke';
 export { default as preventBodyScroll } from './preventBodyScroll';
+export { usePrevious } from './usePrevious';
+export { useId } from './useId';
+export { useForkRef } from './useForkRef';

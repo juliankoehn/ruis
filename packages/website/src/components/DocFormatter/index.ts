@@ -1,1 +1,0 @@
-export { DocFormatter } from './DocFormatter'
