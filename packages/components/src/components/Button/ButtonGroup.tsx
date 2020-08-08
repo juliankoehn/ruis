@@ -1,45 +1,43 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React from 'react';
+import { css } from '@emotion/core';
 
-export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface ButtonGroupProps
+  extends React.HTMLAttributes<HTMLDivElement> {}
 
-const StyledGroup = styled.div({
-    position: 'relative',
-    display: 'inline-block',
-    verticalAlign: 'middle',
+const groupStyles = css`
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 
-    '> *': {
-        position: 'relative',
-        float: 'left',
-        
-    },
-    // we have to remove radius of our children
-    '> *:first-child': {
-        borderTopRightRadius: 0,
-        borderBottomRightRadius: 0
-    },
-    '> *:last-child': {
-        borderTopLeftRadius: 0,
-        borderBottomLeftRadius: 0
-    },
-    '> *:not(:first-child):not(:last-child)': {
-        borderRadius: 0,
-    }
-})
+  > * {
+    position: relative;
+    float: left;
+    margin-right: 0 !important;
+  }
+  // we have to remove radius of our children
+  > *:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  ,
+  > *:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  ,
+  > *:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+`;
 
-export const ButtonGroup = React.forwardRef((props: ButtonGroupProps, ref: React.Ref<HTMLDivElement>) => {
-    const {
-        children,
-        ...rest
-    } = props
-    
+export const ButtonGroup = React.forwardRef(
+  (props: ButtonGroupProps, ref: React.Ref<HTMLDivElement>) => {
+    const { children, ...rest } = props;
+
     return (
-        <StyledGroup
-            {...rest}
-            role="group"
-            ref={ref}
-        >
-            {children}
-        </StyledGroup>
-    )
-})
+      <div {...rest} role="group" ref={ref} css={groupStyles}>
+        {children}
+      </div>
+    );
+  },
+);
