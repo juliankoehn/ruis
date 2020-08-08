@@ -1,6 +1,20 @@
+$screens: sm md lg xl;
+// flex 
 $flexs: 1 auto initial none;
 $grows: 0 1;
 $shrinks: 0 1;
+// directions
+$directions: row "row-reverse" column "col-reverse";
+// wraps
+$wraps: nowrap wrap "wrap-reverse";
+// align items
+$alignments: stretch "flex-start" center "flex-end" baseline;
+// align content
+$contents: "flex-start" center "flex-end" "space-between" "space-around";
+// align self
+$selfs: "auto" "flex-start" "center" "flex-end" "stretch";
+// justify content
+$justifies: "flex-start" "center" "flex-end" "space-between" "space-around" "space-evenly";
 
 @each $flex in $flexs {
   .flex-#{$flex} {
@@ -21,4 +35,102 @@ $shrinks: 0 1;
 
 .flex-shrink {
     flex-shrink: var(--flex-shrink);
+}
+
+@each $direction in $directions {
+    .flex-#{$direction} {
+        flex-direction: #{$direction};
+    }
+}
+
+@each $wrap in $wraps {
+    .flex-#{$wrap} {
+        flex-wrap: #{$wrap};
+    }
+}
+
+@each $align in $alignments {
+    .items-#{$align} {
+        align-items: #{$align};
+    }
+}
+
+@each $align in $contents {
+    .content-#{$align} {
+        align-content: #{$align};
+    }
+}
+
+@each $align in $selfs {
+    .self-#{$align} {
+        align-self: #{$align};
+    }
+}
+
+@each $align in $justifies {
+    .justify-#{$align} {
+        justify-content: #{$align};
+    }
+}
+
+@each $screen in $screens {
+    @media(min-width: var(--screen-#{$screen})) {
+        @each $direction in $directions {
+            .#{$screen}#{'\\'}:flex-#{$direction} {
+                flex-direction: #{$direction};
+            }
+        }
+
+        @each $flex in $flexs {
+            .#{$screen}#{'\\'}:flex-#{$flex} {
+                flex: var(--flex-#{$flex});
+            }
+        }
+
+        .#{$screen}#{'\\'}:flex-grow-0 {
+            flex-grow: var(--flex-grow-0);
+        }
+        .#{$screen}#{'\\'}:flex-grow {
+            flex-grow: var(--flex-grow);
+        }
+
+        .#{$screen}#{'\\'}:flex-shrink-0 {
+            flex-shrink: var(--flex-shrink-0);
+        }
+
+        .#{$screen}#{'\\'}:flex-shrink {
+            flex-shrink: var(--flex-shrink);
+        }
+
+        @each $wrap in $wraps {
+            .#{$screen}#{'\\'}:flex-#{$wrap} {
+                flex-wrap: #{$wrap};
+            }
+        }
+
+        @each $align in $alignments {
+            .#{$screen}#{'\\'}:items-#{$align} {
+                align-items: #{$align};
+            }
+        }
+
+        @each $align in $contents {
+            .#{$screen}#{'\\'}:content-#{$align} {
+                align-content: #{$align};
+            }
+        }
+
+        @each $align in $selfs {
+            .#{$screen}#{'\\'}:self-#{$align} {
+                align-self: #{$align};
+            }
+        }
+
+        @each $align in $justifies {
+            .#{$screen}#{'\\'}:justify-#{$align} {
+                justify-content: #{$align};
+            }
+        }
+        
+    }
 }
