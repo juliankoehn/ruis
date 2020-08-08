@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const Home: NextPage<Props> = ({ content }) => {
-  console.log(content);
+  //console.log(content);
   if (!content.examples?.length) {
     return (
       <React.Fragment>

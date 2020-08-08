@@ -103,7 +103,7 @@ export function getContentByPath(slug: string | string[]) {
     const examples: string[] = [];
 
     files.forEach((dirent) => {
-      if (dirent.isFile && dirent.name !== 'index.md') {
+      if (dirent.isFile() && dirent.name !== 'index.md') {
         const context = readFileSync(join(path, dirent.name), 'utf8');
         examples.push(context);
       }
