@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './styles';
 import { SideNavbarProps, NavItem } from './types';
-import { Button } from '../../Button';
-import { IconButton } from '../../IconButton';
 import { Icon } from '../../Icon';
 import { Tooltip } from '../../Tooltip';
 
