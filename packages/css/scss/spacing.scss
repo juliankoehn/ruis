@@ -1,6 +1,7 @@
 $spacings: px 0 1 2 3 4 5 6 8 10 12 16 20 24 32 40 48 56 64;
 
 @each $spacing in $spacings {
+
     .mb-#{$spacing} {
         margin-bottom: var(--spacing-#{$spacing});
     }
@@ -49,5 +50,57 @@ $spacings: px 0 1 2 3 4 5 6 8 10 12 16 20 24 32 40 48 56 64;
 
     .m-#{$spacing} {
         margin: var(--spacing-#{$spacing});
+    }
+
+    // negative
+
+    .-mb-#{$spacing} {
+        margin-bottom: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-mt-#{$spacing} {
+        margin-top: calc(var(--spacing-#{$spacing}) * -1);
+    }
+
+    .-ml-#{$spacing} {
+        margin-left: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-mr-#{$spacing} {
+        margin-right: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-pb-#{$spacing} {
+        padding-bottom: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-pt-#{$spacing} {
+        padding-top: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-pl-#{$spacing} {
+        padding-left: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-r-#{$spacing} {
+        padding-right: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-px-#{$spacing} {
+        padding-left: calc(var(--spacing-#{$spacing}) * -1);
+        padding-right: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-py-#{$spacing} {
+        padding-top: calc(var(--spacing-#{$spacing}) * -1);
+        padding-bottom: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-mx-#{$spacing} {
+        margin-left: calc(var(--spacing-#{$spacing}) * -1);
+        margin-right: calc(var(--spacing-#{$spacing}) * -1);
+    }
+    .-my-#{$spacing} {
+        margin-top: calc(var(--spacing-#{$spacing}) * -1);
+        margin-bottom: calc(var(--spacing-#{$spacing}) * -1);
+    }
+
+    .-p-#{$spacing} {
+        padding: calc(var(--spacing-#{$spacing}) * -1);
+    }
+
+    .-m-#{$spacing} {
+        margin: calc(var(--spacing-#{$spacing}) * -1);
     }
 }
