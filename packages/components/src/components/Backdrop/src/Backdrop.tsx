@@ -6,8 +6,6 @@ import { BackdropProps } from './types';
 import { safeInvoke, preventBodyScroll } from '../../utils';
 import { Transition } from 'react-transition-group';
 import { ANIMATION_DURATION, getBackdropStyles } from './styles';
-import { wrap } from 'lodash';
-import { button } from '@storybook/addon-knobs';
 
 const noop = () => {};
 
