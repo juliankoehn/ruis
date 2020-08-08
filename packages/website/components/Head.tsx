@@ -7,6 +7,14 @@ type HeadProps = {
   children?: React.ReactNode;
 };
 
-export const Head: React.FC<HeadProps> = () => {
-  return <div></div>;
+export const Head: React.FC<HeadProps> = ({ title, description, children }) => {
+  return (
+    <NextHead>
+      <title>{title} - ruids</title>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content={description} />
+      {children}
+    </NextHead>
+  );
 };

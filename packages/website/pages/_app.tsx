@@ -1,13 +1,27 @@
 import '@ruids/css/dist/styles.css';
-import { Container } from '@ruids/components';
+import { AppContext } from '@/components';
+import {
+  AppInitialProps,
+  NextComponentType,
+  NextPageContext,
+} from 'next/dist/next-server/lib/utils';
 
-interface AppProps {
-  Component: React.ElementType;
+interface AppProps extends AppInitialProps {
+  Component: NextComponentType<NextPageContext, {}, {}>;
   pageProps: any;
+  dirs: any;
 }
 
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <AppContext.Provider
+      value={{
+        messages: [],
+      }}
+    >
+      <Component {...pageProps} />
+    </AppContext.Provider>
+  );
 }
 
-export default App;
+export default MyApp;
