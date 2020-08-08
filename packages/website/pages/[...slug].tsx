@@ -1,25 +1,23 @@
 import React from 'react';
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
-import { Head, Navigation } from '../components';
+import { Head, Navigation, Layout } from '../components';
 import { Container, Heading, Paragraph, Button } from '@ruids/components';
 import { getAllDocs, ContentItem, getContentByPath } from '@/lib/api';
 import { Markdown } from '@/components/Markdown/Markdown';
 
 type Props = {
   content: ContentItem;
+  navigation: ContentItem[];
 };
 
-export const Home: NextPage<Props> = ({ content }) => {
-  //console.log(content);
+export const Home: NextPage<Props> = ({ content, navigation }) => {
   if (!content.examples?.length) {
     return (
       <React.Fragment>
         <Head title={content.title} description={content.description} />
-        <Navigation />
-
-        <Container>
+        <Layout navigation={navigation}>
           <Markdown source={content.content} />
-        </Container>
+        </Layout>
       </React.Fragment>
     );
   }
@@ -31,13 +29,12 @@ export const Home: NextPage<Props> = ({ content }) => {
   return (
     <React.Fragment>
       <Head title={content.title} description={content.description} />
-      <Navigation />
 
-      <Container>
+      <Layout navigation={navigation}>
         <Markdown source={header} />
         i have examples!
         <Markdown source={footer} />
-      </Container>
+      </Layout>
     </React.Fragment>
   );
 };
@@ -81,11 +78,12 @@ export const getStaticPaths: GetStaticPaths<{
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const item = getContentByPath(params.slug);
-
+  const { content: Navigation } = getAllDocs();
   return {
     props: {
       content: item,
       slug: params.slug,
+      navigation: Navigation,
     },
   };
 };
