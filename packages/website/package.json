@@ -14,7 +14,7 @@
     "@ruids/css": "^1.6.0",
     "@ruids/tokens": "^1.7.0",
     "js-yaml": "^3.14.0",
-    "next": "9.5.1",
+    "next": "11.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1"
